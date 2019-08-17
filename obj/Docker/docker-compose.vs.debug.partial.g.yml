@@ -1,0 +1,39 @@
+version: '3.4'
+
+services:
+  testapi:
+    image: testapi:dev
+    build:
+      target: base
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_testapi$
+    volumes:
+      - C:\Git\fusioncds\Dipak-Local-Machine-master\9 API and DLL\TestAPI:/app
+      - C:\Users\farid\vsdbg\vs2017u5:/remote_debugger:ro
+#$nuget_volume_mapping_testapi$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_testapi$ bin/Debug/netcoreapp2.0/TestAPI.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
+
+  testapi2:
+    image: testapi2:dev
+    build:
+      target: base
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_testapi2$
+    volumes:
+      - C:\Git\fusioncds\Dipak-Local-Machine-master\9 API and DLL\TestAPI2:/app
+      - C:\Users\farid\vsdbg\vs2017u5:/remote_debugger:ro
+#$nuget_volume_mapping_testapi2$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_testapi2$ bin/Debug/netcoreapp2.0/TestAPI2.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
+

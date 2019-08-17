@@ -1,0 +1,38 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+        php: 7.3
+        
+  build:
+    commands:
+      - cp CommonLibrary/CommonLibrary.csproj .
+      - dotnet restore CommonLibrary/CommonLibrary.csproj
+      - dotnet build CommonLibrary/CommonLibrary.csproj
+      - pwd
+  post_build:
+    commands:
+      - echo "Installing NFS Utilities..."
+      - apt-get update
+      - apt-get install -y nfs-common
+      - echo "Mounting NFS share..."
+      - mkdir efs
+      - mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-b35acbaa.efs.us-west-1.amazonaws.com:/ efs
+      - pwd
+      - cp CommonModels/bin/Debug/netcoreapp2.0/*.dll efs/
+      - cp CommonLibrary/bin/Debug/netcoreapp2.0/*.dll efs/
+      - echo "Listing contents of the EFS directory:"
+      - ls -l efs/
+      - echo "Umounting NFS share..."
+      - umount efs     
+      - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
+      - mkdir $CODEBUILD_RESOLVED_SOURCE_VERSION
+      - cp CommonModels/bin/Debug/netcoreapp2.0/*.dll $CODEBUILD_RESOLVED_SOURCE_VERSION/
+      - cp CommonLibrary/bin/Debug/netcoreapp2.0/*.dll $CODEBUILD_RESOLVED_SOURCE_VERSION/
+      
+artifacts:
+  files:
+    - CommonModels/bin/Debug/netcoreapp2.0/*
+    - CommonLibrary/bin/Debug/netcoreapp2.0/*
+    - $CODEBUILD_RESOLVED_SOURCE_VERSION/*

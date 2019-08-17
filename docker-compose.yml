@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  testapi:
+    image: ${DOCKER_REGISTRY}testapi
+    build:
+      context: .
+      dockerfile: TestAPI/Dockerfile
+
+  testapi2:
+    image: ${DOCKER_REGISTRY}testapi2
+    build:
+      context: .
+      dockerfile: TestAPI2/Dockerfile
+

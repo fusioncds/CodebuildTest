@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws --version
+      - $(aws ecr get-login --no-include-email --region us-east-1)
+      - REPOSITORY_URI=177599039295.dkr.ecr.us-east-1.amazonaws.com/fcdsrepository
+  
+  build:
+    commands:
+      - ls -la      
+      - echo Build started on `date`
+      - echo Building the Docker image...        
+      - docker build -t testapi .
+
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker images...
+      - docker tag testapi $REPOSITORY_URI:fcdsrepositorynew
+      - docker push $REPOSITORY_URI:fcdsrepositorynew
