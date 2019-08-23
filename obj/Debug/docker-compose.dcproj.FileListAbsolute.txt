@@ -1,0 +1,1 @@
+C:\Git\fusioncds\CodebuildTest\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache

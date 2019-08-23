@@ -20,7 +20,7 @@
 
   <ItemGroup>
     <Reference Include="CommonModels">
-      <HintPath>..\CommonModels\bin\Release\netcoreapp2.0\CommonModels.dll</HintPath>
+      <HintPath>..\CommonModels\bin\Debug\netcoreapp2.0\CommonModels.dll</HintPath>
     </Reference>
   </ItemGroup>
 

@@ -11,7 +11,7 @@ using TestAPI.Utils;
 namespace TestAPI.Controllers
 {
     [Produces("application/json")]
-    [Route("api/TestDLL")]
+    [Route("v1/api/TestDLL")]
     public class TestDLLController : BaseController
     {
         public TestDLLController(IConfiguration configuration) : base(configuration)

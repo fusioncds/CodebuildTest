@@ -139,7 +139,7 @@ namespace TestAPI.Controllers
 
                 var listAssemblies = AppDomain.CurrentDomain.GetAssemblies();
 
-                lstMessages.Add(" listAssemblies count" + listAssemblies.Count());
+                lstMessages.Add(" listAssemblies count = " + listAssemblies.Count());
 
 
 

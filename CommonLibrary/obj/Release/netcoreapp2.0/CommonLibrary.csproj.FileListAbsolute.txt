@@ -10,3 +10,15 @@ C:\Git\fusioncds\Dipak-Local-Machine-master\9 API and DLL\CommonLibrary\obj\Rele
 C:\Git\fusioncds\Dipak-Local-Machine-master\9 API and DLL\CommonLibrary\obj\Release\netcoreapp2.0\CommonLibrary.csproj.CopyComplete
 C:\Git\fusioncds\Dipak-Local-Machine-master\9 API and DLL\CommonLibrary\obj\Release\netcoreapp2.0\CommonLibrary.dll
 C:\Git\fusioncds\Dipak-Local-Machine-master\9 API and DLL\CommonLibrary\obj\Release\netcoreapp2.0\CommonLibrary.pdb
+C:\Git\fusioncds\CodebuildTest\CommonLibrary\bin\Release\netcoreapp2.0\CommonLibrary.deps.json
+C:\Git\fusioncds\CodebuildTest\CommonLibrary\bin\Release\netcoreapp2.0\CommonLibrary.dll
+C:\Git\fusioncds\CodebuildTest\CommonLibrary\bin\Release\netcoreapp2.0\CommonLibrary.pdb
+C:\Git\fusioncds\CodebuildTest\CommonLibrary\bin\Release\netcoreapp2.0\CommonModels.dll
+C:\Git\fusioncds\CodebuildTest\CommonLibrary\bin\Release\netcoreapp2.0\CommonModels.pdb
+C:\Git\fusioncds\CodebuildTest\CommonLibrary\obj\Release\netcoreapp2.0\CommonLibrary.csprojAssemblyReference.cache
+C:\Git\fusioncds\CodebuildTest\CommonLibrary\obj\Release\netcoreapp2.0\CommonLibrary.csproj.CoreCompileInputs.cache
+C:\Git\fusioncds\CodebuildTest\CommonLibrary\obj\Release\netcoreapp2.0\CommonLibrary.AssemblyInfoInputs.cache
+C:\Git\fusioncds\CodebuildTest\CommonLibrary\obj\Release\netcoreapp2.0\CommonLibrary.AssemblyInfo.cs
+C:\Git\fusioncds\CodebuildTest\CommonLibrary\obj\Release\netcoreapp2.0\CommonLibrary.csproj.CopyComplete
+C:\Git\fusioncds\CodebuildTest\CommonLibrary\obj\Release\netcoreapp2.0\CommonLibrary.dll
+C:\Git\fusioncds\CodebuildTest\CommonLibrary\obj\Release\netcoreapp2.0\CommonLibrary.pdb
