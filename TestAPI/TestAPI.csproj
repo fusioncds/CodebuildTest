@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,6 +23,6 @@
     <Reference Include="CommonModels">
       <HintPath>..\CommonModels\bin\Debug\netcoreapp2.0\CommonModels.dll</HintPath>
     </Reference>
-  </ItemGroup>
+  </ItemGroup>b
 
 </Project>
