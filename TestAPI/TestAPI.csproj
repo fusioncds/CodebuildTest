@@ -22,6 +22,6 @@
     <Reference Include="CommonModels">
       <HintPath>..\CommonModels\bin\Debug\netcoreapp2.0\CommonModels.dll</HintPath>
     </Reference>
-  </ItemGroup>
+  </ItemGroup>b
 
 </Project>
