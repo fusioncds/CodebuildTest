@@ -13,7 +13,7 @@ namespace TestAPI.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value-1-v1.0", "value-2-v1.0" };
+            return new string[] { "value-api-v1.3", "value-api-v1.3" };
         }
 
         // GET api/values/5

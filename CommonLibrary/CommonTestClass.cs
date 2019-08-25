@@ -14,7 +14,7 @@ namespace CommonLibrary
 
         public string CommonTestMethod()
         {
-            return "CommonLibrary - this is common test method from common class version 1";
+            return "CommonLibrary.CommonTestMethod()-v1.1";
         }
 
     }
