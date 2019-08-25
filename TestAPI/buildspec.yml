@@ -1,23 +1,27 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+        php: 7.3
+
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - $(aws ecr get-login --no-include-email --region us-east-1)
-      - REPOSITORY_URI=177599039295.dkr.ecr.us-east-1.amazonaws.com/fcdsrepository
+      - $(aws ecr get-login --no-include-email --region us-west-1)
+      - REPOSITORY_URI=582517402883.dkr.ecr.us-west-1.amazonaws.com/fcds-test
   
   build:
     commands:
       - ls -la      
       - echo Build started on `date`
       - echo Building the Docker image...        
-      - docker build -t testapi .
+      - docker build -t testapi-1.2 .
 
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
-      - docker tag testapi $REPOSITORY_URI:fcdsrepositorynew
-      - docker push $REPOSITORY_URI:fcdsrepositorynew
+      - docker tag testapi-1.2 $REPOSITORY_URI:1.2
+      - docker push $REPOSITORY_URI:1.2
